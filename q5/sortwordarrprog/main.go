@@ -17,7 +17,11 @@ func SortWordArr(array []string) {
 	for range array {
 		count++
 	}
-	for i := 0; i < count; i++ {
-
+	for i := 0; i <= count-2; i++ {
+		for j := i + 1; j <= count-1; j++ {
+			if array[i] > array[j] {
+				array[i], array[j] = array[j], array[i]
+			}
+		}
 	}
 }
